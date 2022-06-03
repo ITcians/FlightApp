@@ -1,0 +1,7 @@
+[3/6/21]
+1. 10.50-11.35 | hotels search Api complete
+2. 11.35-12.20 | Google signin auth
+3. 12.20-12.45 | Facebook signin auth
+   * code refactoring
+
+[4/6/21]

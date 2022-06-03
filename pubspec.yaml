@@ -1,0 +1,43 @@
+name: flightfare
+description: A new Flutter project.
+
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.15.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  get: ^4.6.1
+  google_fonts:  ^2.2.0
+  flutter_screenutil: ^5.0.2
+  cupertino_icons: ^1.0.2
+  bubble_tab_indicator: "^0.1.5"
+  scrollable_clean_calendar: ^1.1.0
+  currency_picker: ^2.0.9
+  country_list_pick: ^1.0.1+5
+  csc_picker: ^0.2.6
+  page_transition: ^2.0.5
+  app_settings: ^4.1.6
+  http: ^0.13.4
+  firebase_core: ^1.17.1
+  firebase_auth: ^3.3.19
+  google_sign_in: ^5.3.2
+  equatable: ^2.0.3
+
+
+ 
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^1.0.0
+
+flutter:
+
+  uses-material-design: true
+
+  assets:
+    - assets/images/
