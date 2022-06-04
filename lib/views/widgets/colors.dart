@@ -1,0 +1,45 @@
+// ignore_for_file: constant_identifier_names
+
+import 'package:flutter/material.dart';
+
+const color_transparent = Colors.transparent;
+const color_E9FCE =  Color(0xFF0E9FCE);
+const color_EDF1F9 = Color(0xFFEDF1F9);
+const color_white = Color(0xFFFFFFFF);
+const color_0D1F3C = Color(0xFF0D1F3C);
+const color_485068 = Color(0xFF485068);
+const color_0E9FCE = Color(0xFF0E9FCE);
+const color_E5E5E5 = Color(0xFFE5E5E5);
+const color393939 = Color(0xFF393939);
+const colorBorder = Color(0xFFCFD2D8);
+const color3D4C63 = Color(0xFF3D4C63);
+const colorGreyC9 = Color(0xFFB5BBC9);
+const colorDarkGrey63 = Color(0xFF3D4C63);
+const colorError = Color(0xFFDA251C);
+const shadowColor = Color.fromRGBO(20, 70, 150, 0.15);
+const shadowColorDrawer = Color.fromRGBO(0, 0, 0, 0.25);
+const shadowColorDialog = Color.fromRGBO(59, 74, 116, 0.135473);
+const colorTextDarkBlue = Color(0xFF1E1C61);
+const colorDarkBlue = Color(0xFF001A72);
+const colorPrimaryBlue = Color(0xFF347AF0);
+const colorOrange = Color(0xFFF2994A);
+const colorBlack = Color(0xFF000000);
+const dividerColorGrey = Color(0xFFCFD2D8);
+const colorGreen = Color(0xFF0A811D);
+const colorBorderSides = Color(0xFFD3D3D3);
+const ColorBorderSidesLight = Color(0xFFE1E1E1);
+const colorBorder9D = Color(0xFF9D9D9D);
+const colorEC2 = Color(0xFFA2AEC2);
+const circleBorderColor = Color(0xFFB7B7B7);
+const colorDarkBlueText = Color(0xFF004481);
+const colorF7 = Color(0xFFEFF3F7);
+const color5B = Color(0xFF22215B);
+const colorFFC = Color(0xFFD2EFFC);
+const color96B = Color(0xFF2B296B);
+const color1FA = Color(0xFFEDF1FA);
+const colorFFD = Color(0xFFD2EFFD);
+const colorBorder42 = Color(0xFF1B3142);
+const colorBorder2A = Color(0xFF2A2A2A);
+const colorE9ECD = Color(0xFF0E9ECD);
+const colorGrey8D = Color(0xFF8D8D8D);
+const colorGrey69 = Color(0xFF6A6969);

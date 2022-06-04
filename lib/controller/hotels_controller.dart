@@ -1,0 +1,1 @@
+// class HotelsController extends
