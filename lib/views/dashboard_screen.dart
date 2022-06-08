@@ -6,7 +6,6 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:http/http.dart' as http;
-
 import 'package:flightfare/constants/colors.dart';
 import 'package:flightfare/constants/image.dart';
 import 'package:flightfare/constants/textstyle.dart';
@@ -668,9 +667,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
             children: [
               GestureDetector(
                 onTap: () {
-                  Get.to(() => (CitySelectScreen(
-                        title: 'Select City',
-                      )));
+                  Get.to(() => (const CitySelectScreen()));
                 },
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.end,
@@ -729,9 +726,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
               ),
               GestureDetector(
                 onTap: () {
-                  Get.to(() => (CitySelectScreen(
-                        title: 'Select City',
-                      )));
+                  Get.to(() => (const CitySelectScreen()));
                 },
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.end,
@@ -1153,19 +1148,24 @@ class _DashboardScreenState extends State<DashboardScreen> {
                         child: const FlightSelectScreen(),
                       ));
                 },
-                child: Container(
-                  width: 330.w,
-                  height: 45.h,
-                  decoration: const BoxDecoration(
-                    borderRadius: BorderRadius.all(Radius.circular(06)),
-                    color: Color(0xFF0b30bc),
-                  ),
-                  child: Center(
-                    child: Text("SEARCH FLIGHT",
-                        style: GoogleFonts.poppins(
-                            fontSize: 18,
-                            fontWeight: FontWeight.w400,
-                            color: Colors.white)),
+                child: InkWell(
+                  onTap: () async {
+                    await oneWayRequest();
+                  },
+                  child: Container(
+                    width: 330.w,
+                    height: 45.h,
+                    decoration: const BoxDecoration(
+                      borderRadius: BorderRadius.all(Radius.circular(06)),
+                      color: Color(0xFF0b30bc),
+                    ),
+                    child: Center(
+                      child: Text("SEARCH FLIGHT",
+                          style: GoogleFonts.poppins(
+                              fontSize: 18,
+                              fontWeight: FontWeight.w400,
+                              color: Colors.white)),
+                    ),
                   ),
                 ),
               ),
@@ -1201,6 +1201,29 @@ class _DashboardScreenState extends State<DashboardScreen> {
       setState(() {
         currentDate = pickedDate;
       });
+    }
+  }
+
+  Future<void> oneWayRequest() async {
+    const _authority = 'api.travelpayouts.com';
+    final http.Client _httpClient = http.Client();
+    http.Response response;
+    final uri = Uri.https(_authority, '/v1/flight_search_results');
+    try {
+      response = await _httpClient.post(uri, body: {
+        "signature": "d9bdbd19fc4834fb0c1993c89714781c",
+        "marker": "",
+        "host": "beta.aviasales.com",
+        "user_ip": "127.0.0.1",
+        "locale": "en",
+        "trip_class": "Y",
+        "passengers": {"adults": 1, "children": 0, "infants": 0},
+        "segments": [
+          {"origin": "LAX", "destination": "NYC", "date": "2017-06-18"}
+        ]
+      });
+    } on Exception {
+      throw HttpException();
     }
   }
 }
@@ -1268,11 +1291,4 @@ class Destinationswidgets extends StatelessWidget {
       ),
     );
   }
-
 }
-
-class JsonDecodeException implements Exception {}
-
-class HttpException implements Exception {}
-
-/// This is a implementation of the Country State City Picker.

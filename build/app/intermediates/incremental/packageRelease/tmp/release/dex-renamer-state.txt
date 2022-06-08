@@ -1,4 +1,0 @@
-#Fri Jun 03 00:17:56 PKT 2022
-base.0=C\:\\Users\\AbubakarShaikh\\Desktop\\Az solution\\flight_app\\build\\app\\intermediates\\dex\\release\\minifyReleaseWithR8\\classes.dex
-renamed.0=classes.dex
-path.0=classes.dex

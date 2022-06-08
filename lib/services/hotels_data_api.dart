@@ -7,6 +7,7 @@ import 'all_exceptions.dart';
 void main() async {}
 
 class HotelsDataAPI {
+  
   HotelsDataAPI({http.Client? httpClient})
       : _httpClient = httpClient ?? http.Client();
 
@@ -23,11 +24,11 @@ class HotelsDataAPI {
       "limit": "1",
       "token": "fbafe95f54068fb7b0ffc22e6f523bce",
     });
-    try {
-      response = await _httpClient.get(uri);
-    } on Exception {
-      throw HttpException();
-    }
+      try {
+        response = await _httpClient.get(uri);
+      } on Exception {
+        throw HttpException();
+      }
 
     if (response.statusCode != 200) {
       throw HttpRequestFailure(response.statusCode);

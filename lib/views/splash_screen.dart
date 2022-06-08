@@ -49,7 +49,6 @@ class _SplashScreenState extends State<SplashScreen>
   }
 
   void moveNext() async {
-    FirebaseAuth.instance.signOut();
     Timer(const Duration(seconds: 3), () async {
       Get.to(() {
         final currentUser = FirebaseAuth.instance.currentUser;

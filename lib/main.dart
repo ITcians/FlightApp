@@ -6,6 +6,7 @@ import 'package:get/get.dart';
 import 'constants/constants.dart';
 import 'controller/auth_controller.dart';
 
+
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await firebaseInitialization.then((value) {
